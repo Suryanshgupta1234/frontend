@@ -12,6 +12,7 @@ const UserPosts = () => {
   const fetchPosts = async () => {
     try {
       const res = await axios.get("https://backend-project-production-b12f.up.railway.app/post");
+      console.log("DATA:", res.data);
       setPosts(res.data.post);
     } catch (error) {
       console.log(error);
